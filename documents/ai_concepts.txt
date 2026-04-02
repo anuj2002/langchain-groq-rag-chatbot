@@ -1,0 +1,37 @@
+Introduction to Artificial Intelligence
+
+Artificial Intelligence (AI) is the simulation of human intelligence processes by computer systems.
+These processes include learning, reasoning, and self-correction.
+
+Machine Learning is a subset of AI that enables systems to learn and improve from experience
+without being explicitly programmed. It focuses on developing computer programs that can access
+data and use it to learn for themselves.
+
+Deep Learning is a subfield of machine learning that uses neural networks with many layers
+(hence "deep") to learn representations of data. It has driven breakthroughs in image recognition,
+natural language processing, and speech recognition.
+
+Large Language Models (LLMs) are AI systems trained on vast amounts of text data. They can
+generate human-like text, answer questions, summarize documents, translate languages, and more.
+Examples include GPT-4, Claude, and Gemini.
+
+Retrieval-Augmented Generation (RAG) is a technique that combines a retrieval system with a
+generative model. The retrieval system fetches relevant documents from a knowledge base, and
+the generative model uses these documents to produce accurate, grounded answers.
+
+Vector Embeddings are numerical representations of text in a high-dimensional space where
+semantically similar texts are placed close together. They are used in semantic search and
+retrieval systems.
+
+A Vector Database stores and indexes vector embeddings for fast similarity search. Examples
+include FAISS, Pinecone, ChromaDB, and Weaviate.
+
+Prompt Engineering is the practice of crafting inputs (prompts) to guide AI models toward
+desired outputs. Good prompt engineering can dramatically improve the quality of AI responses.
+
+Agents in AI are systems that can perceive their environment, make decisions, and take actions
+to achieve goals. LLM-based agents can use tools like search engines, code interpreters, and
+databases to solve complex tasks.
+
+LangChain is an open-source framework for building applications with large language models.
+It provides abstractions for chains, agents, memory, document loaders, vector stores, and more.

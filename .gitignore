@@ -1,0 +1,25 @@
+# Secret keys — never commit
+.env
+
+# Vector index (auto-generated, can be large)
+faiss_index/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code local settings
+.claude/

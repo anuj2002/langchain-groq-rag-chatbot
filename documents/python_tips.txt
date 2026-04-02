@@ -1,0 +1,53 @@
+Python Best Practices and Tips
+
+Python is a high-level, interpreted programming language known for its readability and simplicity.
+It follows the principle "There should be one obvious way to do it."
+
+Virtual Environments: Always use virtual environments (venv, conda, or poetry) to isolate project
+dependencies. This prevents version conflicts between projects. Create one with:
+  python -m venv .venv
+  source .venv/bin/activate  (Linux/Mac)
+  .venv\Scripts\activate     (Windows)
+
+Type Hints: Python 3.5+ supports type annotations. They improve code readability and enable
+static analysis tools like mypy. Example:
+  def greet(name: str) -> str:
+      return f"Hello, {name}!"
+
+List Comprehensions: A concise way to create lists. They are generally faster than equivalent
+for-loops. Example:
+  squares = [x**2 for x in range(10)]
+
+Context Managers: Use the `with` statement for resource management (files, database connections).
+They ensure proper cleanup even if an error occurs:
+  with open("file.txt") as f:
+      content = f.read()
+
+Generators: Use generators for memory-efficient iteration over large datasets. They yield values
+one at a time instead of storing everything in memory:
+  def count_up(n):
+      for i in range(n):
+          yield i
+
+Dataclasses: Use @dataclass decorator for classes that primarily store data. They auto-generate
+__init__, __repr__, and __eq__ methods:
+  from dataclasses import dataclass
+  @dataclass
+  class Point:
+      x: float
+      y: float
+
+Error Handling: Use specific exception types rather than bare `except` clauses. Always handle
+exceptions at the appropriate level and log errors with context.
+
+Environment Variables: Never hardcode secrets. Use environment variables and the python-dotenv
+library to load them from a .env file:
+  from dotenv import load_dotenv
+  import os
+  load_dotenv()
+  api_key = os.getenv("API_KEY")
+
+f-strings: Prefer f-strings over .format() or % formatting for string interpolation.
+They are faster and more readable:
+  name = "Alice"
+  message = f"Hello, {name}! You are {len(name)} characters long."
